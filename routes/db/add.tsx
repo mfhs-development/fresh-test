@@ -6,12 +6,12 @@ export const handler: Handlers = {
   async POST(req: Request, ctx: FreshContext) {
     const db = new DatabaseSync("test.db");
     const formdata = await req.formData();
-    const name = formdata.get("name")?.toString();
-    const age = formdata.get("age")?.toString();
+    const name = formdata.get("name")?.toString() as string;
+    const age = formdata.get("age")?.toString() as string;
     // console.log("POST request received", formdata);
     db.prepare(`INSERT INTO people (name, age) VALUES (?, ?);`).run(
-      name as string,
-      age as string,
+      name,
+      age,
     );
 
     // Redirect to the list page after adding a new person
