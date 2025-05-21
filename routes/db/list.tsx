@@ -29,7 +29,7 @@ export default function List(props: PageProps<State>) {
       <ul>
         {props.data.people.map((person) => (
           <li class="flex gap-2 items-center" key={person.id}>
-            <p class="">{person.id}</p>
+            <p class="">{person.id}:</p>
             <h3 class=" font-bold">{person.name}</h3>
             <p class="">{person.age}</p>
           </li>
