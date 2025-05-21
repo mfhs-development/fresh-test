@@ -13,7 +13,7 @@ export default function App({ Component }: PageProps) {
         <title>fresh-test</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body f-client-navx>
+      <body f-client-nav>
         <Nav />
         <div class="container mx-auto p-8">
           <Partial name="body">
