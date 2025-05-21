@@ -12,13 +12,12 @@ interface State {
 }
 
 export const handler: Handlers<State> = {
-  async GET(_req: Request, ctx: FreshContext<State>) {
+  async GET(_req: Request, ctx: FreshContext) {
     const db = new DatabaseSync("test.db");
     const rows: Person[] = db.prepare("SELECT id, name, age FROM people")
       .all() as Person[];
     console.log("Rows: ", rows);
-    const resp = await ctx.render({ people: rows });
-    return resp;
+    return ctx.render({ people: rows });
   },
 };
 
