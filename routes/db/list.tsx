@@ -12,11 +12,12 @@ interface State {
 }
 
 export const handler: Handlers<State> = {
+  // Här hämtar vi alla personer från databasen och skickar dem till
+  // List-komponenten som properties.
   async GET(_req: Request, ctx: FreshContext) {
     const db = new DatabaseSync("test.db");
     const rows: Person[] = db.prepare("SELECT id, name, age FROM people")
       .all() as Person[];
-    console.log("Rows: ", rows);
     return ctx.render({ people: rows });
   },
 };
