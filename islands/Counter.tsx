@@ -22,7 +22,7 @@ export default function Counter(props: CounterProps) {
       >
         +1
       </button>
-      <h3>Klient-interaktiv räknare</h3>
+      <h3>Interaktiv klient-komponent ("Island")</h3>
     </div>
   );
 }

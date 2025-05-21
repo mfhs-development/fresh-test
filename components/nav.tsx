@@ -9,6 +9,9 @@ export default function Nav() {
       <a href="/" f-partial="/">Home</a>
       <a href="/about" f-partial="/about">About</a>
       <a href="/contact">Contact</a>
+      <a href="/db/setup">DB Setup</a>
+      <a href="/db/list">DB List</a>
+      <a href="/db/add">DB Add</a>
     </nav>
   );
 }

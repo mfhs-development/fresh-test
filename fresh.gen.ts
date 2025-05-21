@@ -5,6 +5,10 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $about from "./routes/about.tsx";
+import * as $db_add from "./routes/db/add.tsx";
+import * as $db_list from "./routes/db/list.tsx";
+import * as $db_setup from "./routes/db/setup.tsx";
+import * as $db_teardown from "./routes/db/teardown.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
@@ -15,6 +19,10 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/about.tsx": $about,
+    "./routes/db/add.tsx": $db_add,
+    "./routes/db/list.tsx": $db_list,
+    "./routes/db/setup.tsx": $db_setup,
+    "./routes/db/teardown.tsx": $db_teardown,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
   },
